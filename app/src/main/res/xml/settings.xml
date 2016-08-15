@@ -92,13 +92,13 @@
         android:title="@string/settings_category_other_title"
         android:textAllCaps="true">
 
-        <EditTextPreference
+        <Preference
             android:key="@string/download_path_key"
             android:title="@string/download_path_title"
             android:summary="@string/download_path_summary"
             android:dialogTitle="@string/download_path_dialog_title" />
 
-        <EditTextPreference
+        <Preference
             android:key="@string/download_path_audio_key"
             android:title="@string/download_path_audio_title"
             android:summary="@string/download_path_audio_summary"
@@ -110,11 +110,13 @@
             android:summary="@string/autoplay_by_calling_app_summary"
             android:defaultValue="false" />
 
+        <!--
         <CheckBoxPreference
             android:key="@string/use_tor_key"
             android:title="@string/use_tor_title"
             android:summary="@string/use_tor_summary"
             android:defaultValue="false"/>
+            -->
 
     </PreferenceCategory>
 </PreferenceScreen>

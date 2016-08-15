@@ -1,5 +1,7 @@
 package org.schabi.newpipe.extractor.services.youtube;
 
+import android.util.Log;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -22,6 +24,7 @@ import java.net.URLEncoder;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -130,10 +133,10 @@ public class YoutubeSearchEngine extends SearchEngine {
     }
 
     @Override
-    public ArrayList<String> suggestionList(String query, String contentCountry, Downloader dl)
+    public List<String> suggestionList(String query, String contentCountry, Downloader dl)
             throws IOException, ParsingException {
 
-        ArrayList<String> suggestions = new ArrayList<>();
+        List<String> suggestions = new ArrayList<>();
 
         /* Cant use Uri.Bilder since it's android code.
         // Android code is baned from the extractor side.
